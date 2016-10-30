@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{{ meta.title }} - {{ site_title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ meta.description|striptags }}" />
+	<meta name="generator" content="Pico" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="{{ meta.title }}"/>
+	<meta property="og:image" content="{{ meta.image }}"/>
+	<meta property="og:url" content="{{ current_page.url }}"/>
+	<meta property="og:site_name" content="{{ site_title }}"/>
+	<meta property="og:description" content="{{ meta.description|striptags }}"/>
+	<meta name="twitter:title" content="{{ meta.title }}" />
+	<meta name="twitter:image" content="{{ meta.image }}" />
+	<meta name="twitter:url" content="{{ current_page.url }}" />
+	<meta name="twitter:card" content="summary_large_image" />
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ theme_url }}/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ theme_url }}/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ theme_url }}/css/bootstrap.css">
+	
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{ theme_url }}/css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="{{ theme_url }}/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{{ theme_url }}/js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body class="single">
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+		<div id="fh5co-aside" style="background-image: url({{ meta.image }})" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<nav role="navigation">
+				<ul>
+					<li><a href="./"><i class="icon-home"></i></a></li>
+				</ul>
+			</nav>
+			<div class="page-title">
+				<span>{{ meta.date }}</span>
+				<h2>{{ meta.title }}</h2>
+			</div>
+		</div>
+		<div id="fh5co-main-content">
+			<div class="fh5co-post"> 
+				<div class="fh5co-entry padding">
+					<div>
+						{{ content }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="fh5co-navigation">
+{% if prev_page.meta.template == "single" %}
+		<div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url({{ prev_page.meta.image }})">
+			<div class="overlay"></div>
+
+			<a class="copy" href="{{ prev_page.url }}">
+				<div class="display-t">
+					<div class="display-tc">
+						<div>
+							<span>Previous Post</span>
+							<h2>{{ prev_page.title }}</h2>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+{% endif %}
+{% if next_page.meta.template == "single" %}
+		<div class="fh5co-cover next fh5co-cover-sm" style="background-image: url({{ next_page.meta.image }})">
+			<div class="overlay"></div>
+			<a class="copy" href="{{ next_page.url }}">
+				<div class="display-t">
+					<div class="display-tc">
+						<div>
+							<span>Next Post</span>
+							<h2>{{ next_page.title }}</h2>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+{% endif %}
+	<footer>
+		<div>
+			&copy; 2016 Free HTML5. All Rights Reserved. Designed by <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a> Developed By <a href="https://besrourms.github.io" target="_blank">Mohamed Safouan Besrour</a>
+		</div>
+	</footer>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="{{ theme_url }}/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script defer src="{{ theme_url }}/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script defer src="{{ theme_url }}/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script defer src="{{ theme_url }}/js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="{{ theme_url }}/js/jquery.stellar.min.js"></script>
+	<!-- Main -->
+	<script src="{{ theme_url }}/js/main.js"></script>
+
+	</body>
+</html>

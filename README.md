@@ -11,7 +11,7 @@ Download the story folder, upload it in the themes folder of your pico installat
  $config['excerpt_length'] = 12;
 ```
 ###Home Page & Post Page
-To genarate the Home page and the blogposts you can use my index.md & single.md
+To genarate the Home page and the blogposts you can use my index.md & post.md
 
 ###Demo : [link](https://freehtml5.co/demos/story/)
 

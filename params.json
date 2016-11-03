@@ -1,0 +1,6 @@
+{
+  "name": "Story",
+  "tagline": "Story : A simple & clean, Bootstrap blog theme for Pico.",
+  "body": "# Story\r\nA simple & clean, Bootstrap blog theme for Pico.\r\n\r\n##Installation\r\nDownload the story folder, upload it in the themes folder of your pico installation and change the following setting within your config.php:\r\n```sh\r\n $config['theme'] = 'story';\r\n $config['pages_order_by'] = 'date';\r\n $config['pages_order'] = 'desc';\r\n $config['PicoExcerpt.enabled'] = true;\r\n $config['excerpt_length'] = 12;\r\n```\r\n###Home Page & Post Page\r\nTo genarate the Home page and the blogposts you can use my index.md & post.md\r\n\r\n###Demo : [link](https://freehtml5.co/demos/story/)\r\n\r\n###Screenshot\r\n![Story-Screenshot](http://img4.hostingpics.net/pics/935271stoty.jpg)\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
